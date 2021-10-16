@@ -331,7 +331,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 8.508553, y: 1.82}
+  m_Size: {x: 8.32, y: 1.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -345,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313758767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0943, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 160211057}
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747f94dfd996f4849852617fbb465d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityVar: {fileID: 11400000, guid: 01fa64b69b2e13040b1a1a39b1c364db, type: 2}
+  velocityVar: {fileID: 11400000, guid: bcb22c8d57ed9484880051527c88e193, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b107c21020e7ef840af54132c0b4a183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityVar: {fileID: 11400000, guid: 494bee695ae1da849a8ddc6d9225fc09, type: 2}
+  velocityVar: {fileID: 11400000, guid: 314148f8d288bd442b0f0a06e54d507b, type: 2}
 --- !u!212 &1538980086
 SpriteRenderer:
   m_ObjectHideFlags: 0
