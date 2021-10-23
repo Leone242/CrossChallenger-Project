@@ -6,7 +6,7 @@ public class Parallax : MonoBehaviour
 {
     [SerializeField]
     private VelocityFloat velocityVar;
-    private Vector3 initialPosition;
+    protected Vector3 initialPosition;
     protected float imgSize;
 
     public virtual void Awake()
@@ -16,7 +16,7 @@ public class Parallax : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
         float mov = Mathf.Repeat(this.velocityVar.speed * Time.time, this.imgSize/2);
         this.transform.position = this.initialPosition + Vector3.left * mov;
