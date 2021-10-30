@@ -14,6 +14,9 @@ public class Wolf : MonoBehaviour
     private bool endJump = true;
     [SerializeField]
     private float jumpDuration;
+    private Manager manager;
+    [SerializeField]
+    private UnityEvent atCollision;
 
     private void Awake()
     {
@@ -49,5 +52,12 @@ public class Wolf : MonoBehaviour
         yield return new WaitForSeconds(jumpDuration);
         this.enableJump = false;
         this.endJump = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        //atCollision.Invoke();
+        
     }
 }
