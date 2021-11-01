@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+
 
 public class Wolf : MonoBehaviour
 {
@@ -10,13 +10,22 @@ public class Wolf : MonoBehaviour
     private float jumpStrength;
     [SerializeField]
     private KeyCode jumpKey;
-    private bool enableJump = false;
-    private bool endJump = true;
     [SerializeField]
-    private float jumpDuration;
     private Manager manager;
+    private bool isGrounded;
     [SerializeField]
-    private UnityEvent atCollision;
+    private Transform groundCheck;
+    [SerializeField]
+    private LayerMask groundLayer;
+    private bool canDoubleJump;
+    [SerializeField]
+    private Transform collisionCheck;
+    private bool isColliding;
+    [SerializeField]
+    private LayerMask obstacleLayer;
+    [SerializeField]
+    private AudioClip audioJump;
+    
 
     private void Awake()
     {
@@ -25,39 +34,41 @@ public class Wolf : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(this.jumpKey) && this.endJump)
+        if (Input.GetKeyDown(this.jumpKey))
         {
-            this.enableJump = true;
+            if (isGrounded)
+            {
+                Jump();
+                canDoubleJump = true;
+            }
+            else if(canDoubleJump)
+            {
+                jumpStrength /= 1.5f;
+                Jump();
+                canDoubleJump = false;
+                jumpStrength *= 1.5f;
+            }
+        }
+
+        if (isColliding)
+        {
+            Time.timeScale = 0;
+            
+            isColliding = false;
+            
+            manager.StopGame();
         }
     }
 
     private void FixedUpdate()
     {
-        if (this.enableJump)
-        {
-            this.Jump();
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        isColliding = Physics2D.OverlapCircle(collisionCheck.position, 0.01f, obstacleLayer);
     }
 
-    public void Jump()
+    private void Jump()
     {
-        this.rBody.AddForce(Vector2.up * this.jumpStrength, ForceMode2D.Impulse);
-        this.enableJump = false;
-        this.endJump = false;
-        StartCoroutine(ActiveJump());
-    }
-
-    private IEnumerator ActiveJump()
-    {
-        yield return new WaitForSeconds(jumpDuration);
-        this.enableJump = false;
-        this.endJump = true;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        //atCollision.Invoke();
-        
+        this.rBody.velocity = Vector2.up * jumpStrength;
+        AudioController.instance.PlayOneShot(audioJump);
     }
 }

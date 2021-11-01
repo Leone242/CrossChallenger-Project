@@ -4,33 +4,35 @@ using UnityEngine;
 
 public class Odometer : MonoBehaviour
 {
-    private float movement;
+
     private float distance;
     [SerializeField]
     private CanvasUpdate interfaceCanvas;
     private float distanceUnity = 0.014f;
+    private bool odometerActive = true;
 
-    private Vector3 startPoint;
-
-
-    private void Awake()
-    {
-        this.startPoint = this.transform.position;
-    }
 
     private void Update()
     {
-        this.movement = this.startPoint.x * Time.deltaTime;
-        if (this.movement <= startPoint.x)
+        if (odometerActive)
         {
-            this.CoutDistance();
-            this.movement = 0;
+            CoutDistance();
         }
+    }
+
+    public void RestartOdometer()
+    {
+        distance = 0;
     }
 
     private void CoutDistance()
     {
         this.distance += distanceUnity;
         this.interfaceCanvas.UpdInterface((int)distance);
+    }
+
+    public void SetOdometerBool(bool shifter)
+    {
+        odometerActive = shifter;
     }
 }

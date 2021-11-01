@@ -7,7 +7,6 @@ public class Obstacle : MonoBehaviour
 {
     [SerializeField]
     private VelocityFloat velocityVar;
-    private ObstacleContainerObject containerObj;
     [SerializeField]
     private UnityEvent passByBarrier;
 

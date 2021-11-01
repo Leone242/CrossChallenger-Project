@@ -18,7 +18,12 @@ public class Parallax : MonoBehaviour
 
     private void Update()
     {
-        float mov = Mathf.Repeat(this.velocityVar.speed * Time.time, this.imgSize/2);
+        MovePlatform();
+    }
+
+    public void MovePlatform()
+    {
+        float mov = Mathf.Repeat(this.velocityVar.speed * Time.time, this.imgSize / 2);
         this.transform.position = this.initialPosition + Vector3.left * mov;
     }
 }
