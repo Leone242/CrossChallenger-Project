@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3077566457794966066}
   - component: {fileID: 7878203053807414528}
   - component: {fileID: 1469168313132840624}
-  - component: {fileID: 3561157263747612713}
   - component: {fileID: 6257592173492190705}
+  - component: {fileID: 969204824542656151}
   m_Layer: 7
   m_Name: Obstacles_1
   m_TagString: obstacle
@@ -126,32 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6689b437fef191c40bdcdd4bdfa11bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &3561157263747612713
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3077566457794966068}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.19189729}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.34, y: 0.41}
-    newSize: {x: 0.32, y: 0.39}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.3786001}
-  m_EdgeRadius: 0
 --- !u!50 &6257592173492190705
 Rigidbody2D:
   serializedVersion: 4
@@ -173,3 +147,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!60 &969204824542656151
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077566457794966068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.34, y: 0.41}
+    newSize: {x: 0.32, y: 0.39}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.05776291, y: 0.39776292}
+      - {x: -0.119196944, y: 0.33409175}
+      - {x: -0.17, y: 0.25}
+      - {x: -0.16265775, y: 0.093460806}
+      - {x: -0.13021033, y: 0.037342265}
+      - {x: -0.099999994, y: 0}
+      - {x: 0.17, y: 0}
+      - {x: 0.14674953, y: 0.17265774}
+      - {x: 0.06547569, y: 0.32633376}
+      - {x: 0.0020650178, y: 0.4124474}

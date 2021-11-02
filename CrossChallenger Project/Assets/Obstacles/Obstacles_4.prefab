@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1887364225271711928}
   - component: {fileID: 1887364225271711927}
-  - component: {fileID: 1887364225271711926}
   - component: {fileID: 1887364225271711929}
   - component: {fileID: 1887364225271711930}
   - component: {fileID: 1887364225271711931}
+  - component: {fileID: 9052449281281464419}
   m_Layer: 7
   m_Name: Obstacles_4
   m_TagString: obstacle
@@ -86,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!61 &1887364225271711926
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887364225271711925}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2665354}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.36, y: 0.55}
-    newSize: {x: 0.36, y: 0.53}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.53183186}
-  m_EdgeRadius: 0
 --- !u!114 &1887364225271711929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +147,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!60 &9052449281281464419
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887364225271711925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.36, y: 0.55}
+    newSize: {x: 0.36, y: 0.53}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14882334, y: 0.54849255}
+      - {x: -0.16811132, y: 0.5398097}
+      - {x: -0.17999999, y: 0.5162799}
+      - {x: -0.17999999, y: 0.049999997}
+      - {x: -0.17, y: 0}
+      - {x: 0.17999999, y: 0}
+      - {x: 0.17999996, y: 0.468668}
+      - {x: 0.09376316, y: 0.54830164}

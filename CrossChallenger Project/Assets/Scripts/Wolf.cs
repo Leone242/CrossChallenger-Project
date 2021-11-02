@@ -63,7 +63,7 @@ public class Wolf : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-        isColliding = Physics2D.OverlapCircle(collisionCheck.position, 0.01f, obstacleLayer);
+        isColliding = Physics2D.OverlapCircle(collisionCheck.position, 0.065f, obstacleLayer);
     }
 
     private void Jump()

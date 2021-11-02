@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 160215387103945110}
   - component: {fileID: 160215387103945105}
-  - component: {fileID: 160215387103945104}
   - component: {fileID: 396267233100440821}
   - component: {fileID: 6816465334642854313}
   - component: {fileID: 9065733646112854313}
+  - component: {fileID: 6610744620189446176}
   m_Layer: 7
   m_Name: Obstacles_3
   m_TagString: obstacle
@@ -86,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!61 &160215387103945104
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160215387103945107}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.17466705}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.39, y: 0.37}
-    newSize: {x: 0.37, y: 0.36}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.37, y: 0.35439578}
-  m_EdgeRadius: 0
 --- !u!114 &396267233100440821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +147,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!60 &6610744620189446176
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160215387103945107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.39, y: 0.37}
+    newSize: {x: 0.37, y: 0.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.14215733, y: 0.36807245}
+      - {x: -0.08840528, y: 0.35903352}
+      - {x: -0.19954394, y: 0.25337178}
+      - {x: -0.195, y: 0}
+      - {x: 0.195, y: 0}
+      - {x: 0.18894137, y: 0.33560914}
+      - {x: 0.17833881, y: 0.34879485}
