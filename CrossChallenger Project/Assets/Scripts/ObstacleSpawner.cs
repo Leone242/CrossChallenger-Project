@@ -12,6 +12,8 @@ public class ObstacleSpawner : MonoBehaviour
     private ObstacleContainer obstacleContainer;
     [SerializeField]
     private Vector2 regulator;
+    [SerializeField]
+    private float varX;
 
     private void Start()
     {
@@ -20,14 +22,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Spawn()
     {
+
         if (this.obstacleContainer.HasObstacle())
         {
+            regulator.x += Random.Range(-varX, varX);
             var obstacle = this.obstacleContainer.GetObstacle();
             obstacle.transform.position = this.transform.position / regulator;
         }
     }
-
-
 
 
     private void OnDrawGizmos()

@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour
     private VelocityFloat velocityVar;
     [SerializeField]
     private UnityEvent passByBarrier;
+    private ObstacleContainer container;
 
     public virtual void Update()
     {
@@ -21,7 +22,6 @@ public class Obstacle : MonoBehaviour
     }
 
 
-    private ObstacleContainer container;
 
     public void ReturnObject()
     {

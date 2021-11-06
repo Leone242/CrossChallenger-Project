@@ -1721,6 +1721,7 @@ MonoBehaviour:
   timeToSpawn: 1.5
   obstacleContainer: {fileID: 613014181}
   regulator: {x: 1, y: 0.75}
+  varX: 0.18
 --- !u!4 &1543429573
 Transform:
   m_ObjectHideFlags: 0
@@ -2534,7 +2535,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 1.8}
+  m_Size: {x: 0.4, y: 1.8}
   m_EdgeRadius: 0
 --- !u!4 &2000116866
 Transform:
