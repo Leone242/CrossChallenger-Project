@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wolf_Jump
+  m_Name: wolf_jump
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,23 +21,23 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -6239295344317928188, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
-    - time: 0.2
+    - time: 0.13333334
       value: {fileID: 2025246469182668016, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
-    - time: 0.4
+    - time: 0.26666668
       value: {fileID: -5035856363962386106, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
-    - time: 0.6
+    - time: 0.4
       value: {fileID: -2022398831420532332, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
-    - time: 0.8
+    - time: 0.53333336
       value: {fileID: -4540645405377728341, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
-    - time: 1
+    - time: 0.6666667
       value: {fileID: -5643531179676107951, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
-    - time: 1.2
+    - time: 0.8
       value: {fileID: -1239949518318281135, guid: 32c71cfa64600ac4898b694a27b1040c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -64,7 +64,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3000001
+    m_StopTime: 0.81666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -25,19 +25,31 @@ public class Wolf : MonoBehaviour
     private LayerMask obstacleLayer;
     [SerializeField]
     private AudioClip audioJump;
+    private Animator wolfAnimator;
+    private bool canRun;
     
 
     private void Awake()
     {
         this.rBody = this.GetComponent<Rigidbody2D>();
+        this.wolfAnimator = this.GetComponent<Animator>();
     }
+
+    //private void Start()
+    //{
+    //    this.Run();
+    //}
 
     private void Update()
     {
         if (Input.GetKeyDown(this.jumpKey))
         {
-            if (isGrounded)
+            canRun = false;
+            this.wolfAnimator.SetBool("IsRunning", false);
+
+            if (isGrounded && canRun == false)
             {
+                this.wolfAnimator.SetBool("IsJumping", true);
                 Jump();
                 canDoubleJump = true;
             }
@@ -48,7 +60,17 @@ public class Wolf : MonoBehaviour
                 canDoubleJump = false;
                 jumpStrength *= 1.5f;
             }
+            //else
+            //{
+            //    this.wolfAnimator.SetBool("IsJumping", false);
+            //    canRun = true;
+            //}
         }
+        else
+        {
+            this.Run();
+        }
+
 
         if (isColliding)
         {
@@ -70,5 +92,11 @@ public class Wolf : MonoBehaviour
     {
         this.rBody.velocity = Vector2.up * jumpStrength;
         AudioController.instance.PlayOneShot(audioJump);
+    }
+
+    private void Run()
+    {
+        this.wolfAnimator.SetBool("IsJumping", false);
+        this.wolfAnimator.SetBool("IsRunning", true);
     }
 }
